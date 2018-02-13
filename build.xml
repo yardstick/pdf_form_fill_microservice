@@ -1,0 +1,9 @@
+<project name="pdf_form_fill_microservice" default="test">
+    <target name="ensure-ivy">
+        <ant antfile="go-ivy.xml" target="download-ivy"/>
+    </target>
+
+    <target name="test" description="Run all tests in the app">
+        
+    </target>
+</project>

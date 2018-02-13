@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation=
+                    "http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info organisation="yardstick" module="pdf_form_fill_microservice"/>
+    <configurations>
+        <conf name="runtime"/>
+        <conf name="development" visibility="private" extends="runtime"/>
+        <conf name="test" visibility="private" extends="development"/>
+    </configurations>
+    <dependencies>
+        <dependency org="junit" name="junit" rev="4.11" conf="test->default"/>
+        <dependency org="com.itextpdf" name="itextpdf" rev="5.4.1"/>
+        <dependency org="com.google.code.gson" name="gson" rev="2.2.4"/>
+    </dependencies>
+</ivy-module>
