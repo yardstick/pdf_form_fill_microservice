@@ -1,9 +1,12 @@
-<project name="pdf_form_fill_microservice" default="test">
+<project name="pdf_form_fill_microservice" default="test" xmlns:ivy="antlib:org.apache.ivy.ant">
     <target name="ensure-ivy">
         <ant antfile="go-ivy.xml" target="download-ivy"/>
     </target>
 
     <target name="test" description="Run all tests in the app">
-        
+        <ivy:cachepath pathid="yardstick.pdf_form_fill_microservice.cachepath"
+            conf="runtime"
+            file="./ivy.xml"
+            resolveid="yardstick.pdf_form_fill_microservice.runtime"/>
     </target>
 </project>
